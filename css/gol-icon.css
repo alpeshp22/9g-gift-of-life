@@ -1,0 +1,93 @@
+@font-face {
+    font-display: block;
+    font-family: "gift-of-life-icons";
+    src: url("./fonts/gift-of-life-icons.woff2") format("woff2"),
+        url("./fonts/gift-of-life-icons.woff?") format("woff");
+}
+
+.gol::before,
+[class^="gol-"]::before,
+[class*=" gol-"]::before {
+    display: inline-block;
+    font-family: gift-of-life-icons !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    vertical-align: -.125em;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.gol-home::before {
+    content: "\f425";
+}
+
+.gol-home-fill::before {
+    content: "\f425";
+}
+
+.gol-edit::before {
+    content: "\f4cb";
+}
+
+.gol-edit-fill::before {
+    content: "\f4c9";
+}
+
+.gol-heart::before {
+    content: "\f415";
+}
+
+.gol-heart-fill::before {
+    content: "\f19a";
+}
+
+.gol-file-outline::before {
+    content: "\f38b";
+}
+
+.gol-file-fill::before {
+    content: "\f38a";
+}
+
+.gol-trash::before {
+    content: "\f78b";
+}
+
+.gol-trash-fill::before {
+    content: "\f78a";
+}
+
+.gol-trash2::before {
+    content: "\f5de";
+}
+
+.gol-trash2-fill::before {
+    content: "\f5dd";
+}
+
+.gol-arrow-up-short::before {
+    content: "\f145";
+}
+
+.gol-arrow-right-short::before {
+    content: "\f135";
+}
+
+.gol-arrow-down-short::before {
+    content: "\f124";
+}
+
+.gol-arrow-left-short::before {
+    content: "\f12c";
+}
+
+.gol-bars::before {
+    content: "\f479";
+}
+
+.gol-x::before {
+    content: "\f62a";
+}
