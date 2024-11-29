@@ -16,3 +16,31 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 });
+
+// TRIBUTE IMAGE SLIDER 
+$(document).ready(function () {
+    $('.tribute-slider').owlCarousel({
+        loop: true,
+        margin: 10,
+        nav: true,
+        autoplay: true,
+        dots: false,
+        navText: ["<i class='gol-chevron-left'>", "<i class='gol-chevron-right'>"],
+        responsive: {
+            0: {
+                items: 1
+            },
+            991: {
+                items: 3
+            },
+            1200: {
+                items: 4,
+                margin: 24
+            },
+            1500: {
+                items: 5,
+                margin: 24
+            }
+        }
+    });
+});

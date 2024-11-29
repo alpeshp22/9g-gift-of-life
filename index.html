@@ -11,13 +11,17 @@
     <link rel="icon" href="favicon-light.ico" type="image/x-icon" media="(prefers-color-scheme: dark)">
     <!-- REQUIRED STYLES -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
     <!-- CUSTOM STYLES -->
-    <link rel="stylesheet" href="css/gol-icon.css">
-    <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/gol-icon.css" />
+    <link href="css/style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/blocks.css" />
 </head>
 
 <body>
-
+    <!-- HEADER -->
     <header>
         <div class="navbar">
             <div class="container">
@@ -63,10 +67,91 @@
             </div>
         </div>
     </header>
+    <!-- /HEADER -->
 
-    <div class="section">1</div>
-    <div class="section color-section">2</div>
-    <div class="section">3</div>
+    <!-- HERO SECTION -->
+    <div class="hero-section">
+        <div class="container">
+            <div class="content">
+                <div class="cursive-font">Legacies of Love</div>
+                <h1>Memorial Tribute</h1>
+                <h5>Meet the heroes who have given life and hope to others through organ and tissue donation.</h5>
+            </div>
+        </div>
+        <div class="tribute-slider-section section">
+            <div class="container">
+                <div class="tribute-slider owl-carousel">
+                    <div class="img-box">
+                        <img src="https://i.pravatar.cc/300?img=5.webp" class="img-fluid" alt="donor image 1">
+                    </div>
+                    <div class="img-box">
+                        <img src="https://i.pravatar.cc/280?img=23.webp" class="img-fluid" alt="donor image 2">
+                    </div>
+                    <div class="img-box">
+                        <img src="https://i.pravatar.cc/280?img=16.webp" class="img-fluid" alt="donor image 3">
+                    </div>
+                    <div class="img-box">
+                        <img src="https://i.pravatar.cc/280?img=12.webp" class="img-fluid" alt="donor image 4">
+                    </div>
+                    <div class="img-box">
+                        <img src="https://i.pravatar.cc/280?img=8.webp" class="img-fluid" alt="donor image 5">
+                    </div>
+                    <div class="img-box">
+                        <img src="https://i.pravatar.cc/280?img=17.webp" class="img-fluid" alt="donor image 6">
+                    </div>
+                </div>
+                <div class="text-center btns">
+                    <a href="#" class="btn">Find a Hero</a>
+                    <a href="#" class="dark-blue-btn">Create a Tribute</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /HERO SECTION -->
+
+    <div class="info-section section">
+        <div class="container">
+            <div class="row row-cols-md-3">
+                <div class="col">
+                    <div class="info-box">
+                        <img src="images/candle-therapy-icon.svg" class="img-fluid" alt="candle therapy icon" />
+                        <h3>About Legacies of Love Memorial Tribute</h3>
+                        <p>
+                            Tincidunt massa quis est tortor placerat. Id urna dui id proin eget magna porta. Consequat
+                            amet tempus cras commodo. Ut semper nibh cursus aenean convallis in elit. Montes sed quis
+                            vulputate aliquam.
+                        </p>
+                        <a href="javascript:void(0);" class="arrow-btn"><span></span></a>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="info-box">
+                        <img src="images/writing-icon.svg" class="img-fluid" alt="writing icon" />
+                        <h3>Create and Share a Tribute</h3>
+                        <p>
+                            Cursus id ullamcorper magna sit fermentum elit id. Elit odio tincidunt mollis dictum
+                            bibendum. Mollis turpis imperdiet urna ac quam. Magna aliquam placerat hendrerit faucibus
+                            vehicula tellus sed. Eu mauris et sed morbi erat aliquet et.
+                        </p>
+                        <a href="javascript:void(0);" class="arrow-btn"><span></span></a>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="info-box">
+                        <img src="images/heart-people-icon.svg" class="img-fluid" alt="heart people icon" />
+                        <h3>Donor Family Support Services</h3>
+                        <p>
+                            Vulputate justo amet diam aliquam facilisi. Turpis quam lobortis faucibus maecenas pretium
+                            laoreet pharetra ornare augue. Sem adipiscing pretium dignissim felis tempor vestibulum.
+                        </p>
+                        <a href="javascript:void(0);" class="arrow-btn"><span></span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
     <footer>
         <div class="container-xl">
             <div class="d-flex align-items-center top">
@@ -95,7 +180,9 @@
     </footer>
 
     <!-- REQUIRED STYLES -->
+    <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <script src="js/main.js"></script>
 </body>
 

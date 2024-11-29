@@ -92,6 +92,18 @@
     content: "\f62a";
 }
 
+.gol-chevron-left::before {
+    content: "\f284";
+}
+
+.gol-chevron-right::before {
+    content: "\f285";
+}
+
+.gol-chevron-up::before {
+    content: "\f286";
+}
+
 /* SOCIAL ICONS */
 .gol-twitter-x::before {
     content: "\f8db";

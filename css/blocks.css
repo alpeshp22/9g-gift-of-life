@@ -1,0 +1,88 @@
+/* HERO SECTION */
+.hero-section {
+    position: relative;
+    width: 100%;
+    background-image: url('../images/hero-bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center -15vw;
+    background-color: var(--white-color);
+}
+
+.hero-section .content {
+    text-align: center;
+    padding-top: var(--padding);
+}
+
+.hero-section .cursive-font {
+    font-size: 8rem;
+    line-height: 7.55rem;
+    color: var(--orange-color);
+}
+
+.hero-section h5 {
+    max-width: 658px;
+    margin: 0 auto;
+    margin-top: 1rem;
+}
+
+/* /HERO SECTION */
+
+/* TRIBUTE SLIDER SECTION */
+.hero-section .tribute-slider-section {
+    padding-bottom: 0;
+}
+
+.tribute-slider .img-box {
+    position: relative;
+    width: 100%;
+    height: 15vw;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+@media (min-width: 1600px) {
+    .tribute-slider .img-box {
+        height: 324px;
+    }
+}
+
+.tribute-slider .img-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.tribute-slider-section .btns {
+    margin-top: var(--size-24);
+}
+
+.tribute-slider-section .btns a+a {
+    margin-left: var(--size-24);
+}
+
+/* /TRIBUTE SLIDER SECTION */
+
+/* INFO SECTION */
+.info-box {
+    position: relative;
+    width: 100%;
+    min-height: 100%;
+    padding-bottom: 4rem;
+}
+
+.info-box img {
+    margin-bottom: var(--size-24);
+}
+
+.info-box h3 {
+    margin-bottom: 8px;
+}
+
+.info-box .arrow-btn {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+/* INFO SECTION */
