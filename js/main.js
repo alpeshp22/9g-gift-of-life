@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
     const offcanvas = document.getElementById("offcanvasMainNav");
-    const navLinks = document.querySelectorAll(".main-navbar .nav-link");
+    const navLinks = document.querySelectorAll(".main-menu .nav-link");
 
     offcanvas.addEventListener("show.bs.offcanvas", () => {
         navLinks.forEach((link, index) => {

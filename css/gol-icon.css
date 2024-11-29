@@ -91,3 +91,16 @@
 .gol-x::before {
     content: "\f62a";
 }
+
+/* SOCIAL ICONS */
+.gol-twitter-x::before {
+    content: "\f8db";
+}
+
+.gol-instagram::before {
+    content: "\f437";
+}
+
+.gol-facebook::before {
+    content: "\f344";
+}
