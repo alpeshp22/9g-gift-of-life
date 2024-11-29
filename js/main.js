@@ -23,7 +23,8 @@ $(document).ready(function () {
         loop: true,
         margin: 10,
         nav: true,
-        autoplay: true,
+        autoplay: 3000,
+        smartSpeed: 1000,
         dots: false,
         navText: ["<i class='gol-chevron-left'>", "<i class='gol-chevron-right'>"],
         responsive: {

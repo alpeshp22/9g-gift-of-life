@@ -774,6 +774,19 @@ header .offcanvas .light-outline-btn+.light-outline-btn {
 
 header .offcanvas-body {
     overflow-x: hidden;
+    /* scrollbar-color: var(--secondary-color) var(--transparent); */
+}
+
+header .offcanvas-body::-webkit-scrollbar {
+    width: 5px;
+    border-radius: 50px;
+    background-color: red;
+
+}
+
+header .offcanvas-body::-webkit-scrollbar-track {
+    width: 5px;
+    border-radius: 50px;
 }
 
 /* /HEADER STYLE */
