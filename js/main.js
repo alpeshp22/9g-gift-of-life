@@ -29,16 +29,17 @@ $(document).ready(function () {
         navText: ["<i class='gol-chevron-left'>", "<i class='gol-chevron-right'>"],
         responsive: {
             0: {
-                items: 1
+                items: 2
+            },
+            460: {
+                items: 3,
+                margin: 16
             },
             991: {
-                items: 3
-            },
-            1200: {
                 items: 4,
                 margin: 24
             },
-            1500: {
+            1200: {
                 items: 5,
                 margin: 24
             }

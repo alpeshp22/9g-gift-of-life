@@ -86,3 +86,218 @@
 }
 
 /* INFO SECTION */
+
+/* RESPONSIVE */
+@media (max-width: 1299px) {
+    .owl-carousel {
+        padding: 0 60px;
+    }
+
+    .owl-carousel .owl-nav button {
+        left: 0;
+    }
+
+    .owl-carousel .owl-nav button+button {
+        right: 0;
+    }
+}
+
+/* /1299PX */
+
+@media (max-width: 1199px) {
+    .tribute-slider .img-box {
+        height: 18vw;
+    }
+}
+
+/* /1200PX */
+
+@media (max-width: 991px) {
+    :root {
+        --padding: 100px;
+    }
+
+    h1,
+    .h1 {
+        font-size: 3.313rem;
+        line-height: 4.25rem;
+    }
+
+    h3,
+    .h3 {
+        font-size: 2.063rem;
+        line-height: 2.625rem;
+    }
+
+    h5,
+    .h5 {
+        font-size: 1.5rem;
+        line-height: 2.063rem;
+    }
+
+    .btn,
+    .dark-blue-btn,
+    .blue-outline-btn,
+    .light-orange-btn,
+    .light-btn,
+    .light-outline-btn,
+    input[type=submit],
+    .form-control[type=submit] {
+        font-size: var(--small-text);
+        padding: 12px 35px;
+        min-height: 46px;
+        align-content: center;
+    }
+
+    .owl-carousel .owl-nav button {
+        width: 45px;
+        height: 45px;
+    }
+
+    .hero-section {
+        background-position: center -25vw;
+    }
+
+    .hero-section .cursive-font {
+        font-size: 6rem;
+        line-height: 5.55rem;
+    }
+
+    .tribute-slider .img-box {
+        height: 27vw;
+    }
+
+    .info-section .column {
+        max-width: 767px;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .info-box {
+        padding-bottom: 0;
+    }
+
+    .row .column:not(:last-child) .info-box:after {
+        content: '';
+        display: block;
+        width: 80%;
+        height: 1px;
+        background-color: var(--black-color);
+        opacity: 0.1;
+        margin: 0 auto;
+        margin-top: 3rem;
+    }
+
+    .info-box .arrow-btn {
+        position: relative;
+        top: inherit;
+        left: inherit;
+        margin-top: 1rem;
+    }
+}
+
+/* /991PX */
+
+@media (max-width: 768px) {
+    :root {
+        --body-text: 1rem;
+        --large-text: 1.5rem;
+    }
+
+    body,
+    p,
+    li {
+        line-height: 1.625rem;
+    }
+
+    .hero-section .content,
+    .hero-section .tribute-slider-section {
+        padding-top: 3.5rem;
+    }
+
+    .tribute-slider-section .btns a+a {
+        margin-left: .5rem;
+    }
+
+}
+
+/* /768PX */
+
+@media (max-width: 640px) {
+    :root {
+        --padding: 60px;
+    }
+
+    h1,
+    .h1 {
+        font-size: 2.25rem;
+        line-height: 2.75rem;
+    }
+
+    h3,
+    .h3 {
+        font-size: 1.625rem;
+        line-height: 2.25rem;
+    }
+
+    h5,
+    .h5 {
+        font-size: 1.125rem;
+        line-height: 1.625rem;
+    }
+
+    .hero-section .cursive-font {
+        font-size: 4.25rem;
+        line-height: 3.75rem;
+    }
+
+
+}
+
+/* /640PX */
+
+@media (max-width: 460px) {
+
+    .btn,
+    .dark-blue-btn,
+    .blue-outline-btn,
+    .light-orange-btn,
+    .light-btn,
+    .light-outline-btn,
+    input[type=submit],
+    .form-control[type=submit] {
+        font-size: 0.875rem;
+        padding: 10px 25px;
+    }
+
+    .owl-carousel {
+        padding: 0 2.5rem;
+    }
+
+    .owl-carousel .owl-nav button {
+        width: 30px;
+        height: 30px;
+        font-size: 1rem !important;
+    }
+
+    .hero-section .cursive-font {
+        font-size: 3.25rem;
+        line-height: 2.75rem;
+    }
+
+    .tribute-slider .img-box {
+        height: 38vw;
+    }
+
+    .info-section .row-gap-5 {
+        row-gap: 2rem !important;
+    }
+
+    .row .column:not(:last-child) .info-box:after {
+        margin-top: 2rem;
+    }
+}
+
+/* /375PX */
+
+/* /RESPONSIVE */

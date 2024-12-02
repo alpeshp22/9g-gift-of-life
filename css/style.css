@@ -809,6 +809,10 @@ footer .nav-link:first-child {
     margin-left: 0;
 }
 
+footer .nav-link:hover {
+    color: var(--secondary-color);
+}
+
 .social-links .nav-link {
     font-size: var(--large-text);
 }
