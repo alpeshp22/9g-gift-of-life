@@ -280,6 +280,10 @@
         font-size: 1rem !important;
     }
 
+    .hero-section {
+        background-position: center -40vw;
+    }
+
     .hero-section .cursive-font {
         font-size: 3.25rem;
         line-height: 2.75rem;
@@ -298,6 +302,6 @@
     }
 }
 
-/* /375PX */
+/* /460PX */
 
 /* /RESPONSIVE */
