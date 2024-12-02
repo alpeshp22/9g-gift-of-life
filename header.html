@@ -1,0 +1,63 @@
+<div class="navbar">
+    <div class="container">
+        <a class="navbar-brand" href="index.html" title="Gift of Life Donor Program">
+            <img src="images/logo.svg" class="header-logo img-fluid" alt="Gift of Life Logo" />
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMainNav">
+            Menu <i class="gol-bars ms-1"></i>
+        </button>
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasMainNav">
+            <div class="offcanvas-header">
+                <button type="button" class="close-btn" data-bs-dismiss="offcanvas">Close <i
+                        class="gol-x ms-1"></i></button>
+            </div>
+            <div class="offcanvas-body">
+                <ul class="navbar-nav main-menu">
+                    <li class="nav-item">
+                        <a class="nav-link" href="javascript:void(0);">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="javascript:void(0);">Tribute Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="javascript:void(0);">Create A Tribute</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="javascript:void(0);">How To Use</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="javascript:void(0);">FAQ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="javascript:void(0);">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="offcanvas-footer">
+                <a href="javascript:void(0);" class="light-outline-btn">Sing Up</a>
+                <a href="javascript:void(0);" class="light-outline-btn">Log In</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function () {
+        const $offcanvas = $("#offcanvasMainNav");
+        const $navLinks = $(".main-menu .nav-link");
+
+        $offcanvas.on("show.bs.offcanvas", function () {
+            $navLinks.each(function (index) {
+                $(this).css({
+                    animation: `slideIn 0.5s ease forwards`,
+                    animationDelay: `${index * 0.3}s`,
+                });
+            });
+        });
+
+        $offcanvas.on("hidden.bs.offcanvas", function () {
+            $navLinks.css("animation", "none");
+        });
+    });
+
+</script>

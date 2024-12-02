@@ -1,24 +1,10 @@
-document.addEventListener("DOMContentLoaded", () => {
-    const offcanvas = document.getElementById("offcanvasMainNav");
-    const navLinks = document.querySelectorAll(".main-menu .nav-link");
-
-    offcanvas.addEventListener("show.bs.offcanvas", () => {
-        navLinks.forEach((link, index) => {
-            link.style.animation = `slideIn 0.5s ease forwards`;
-            link.style.animationDelay = `${index * 0.3}s`;
-        });
-    });
-
-    // Reset animation on hide to ensure it can replay
-    offcanvas.addEventListener("hidden.bs.offcanvas", () => {
-        navLinks.forEach((link) => {
-            link.style.animation = "none";
-        });
-    });
-});
-
-// TRIBUTE IMAGE SLIDER 
 $(document).ready(function () {
+
+    // LOAD HEADER & FOOTER
+    $('header').load('header.html');
+    $('footer').load('footer.html');
+
+    // TRIBUTE IMAGE SLIDER 
     $('.tribute-slider').owlCarousel({
         loop: true,
         margin: 10,

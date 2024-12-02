@@ -15,6 +15,7 @@
     --black-color: #000000;
     --dark-color: #1B1B1B;
     --gray-color: #3B3B3B;
+    --gray-81: #818181;
     --white-color: #FFFFFF;
     --light-color: #F5F5F5;
     --light-gray-color: #F0ECE9;
@@ -32,8 +33,9 @@
     --button-text: 1rem;
     --x-small-text: 0.875rem;
     --padding: 120px;
-    --size-40: 2.5rem;
     --size-24: 1.5rem;
+    --size-40: 2.5rem;
+    --size-48: 3rem;
     --td-03: all 0.3s ease;
     --td-05: all 0.5s ease;
 }
@@ -93,7 +95,7 @@ h1,
 .h1 {
     font-size: 4.313rem;
     line-height: 4.125rem;
-    color: var(--blue-color);
+    color: var(--primary-color);
 }
 
 h2,
@@ -505,7 +507,8 @@ input[type=submit]:hover:after,
     color: var(--placeholder-color);
 }
 
-.text-quote {
+.text-quote,
+.text-quote * {
     font-family: var(--heading-font);
     font-style: italic;
     font-weight: 500;
@@ -640,6 +643,30 @@ input[type=submit]:hover:after,
     left: auto;
     right: -80px;
 }
+
+.breadcrumb-item,
+.breadcrumb-item a {
+    color: var(--gray-81);
+    font-size: var(--small-text);
+    transition: var(--td-03);
+}
+
+.breadcrumb-item[href]:hover,
+.breadcrumb-item a[href]:hover {
+    color: var(--secondary-color);
+}
+
+.breadcrumb-item.active,
+.breadcrumb-item a.active {
+    color: var(--dark-color);
+}
+
+.breadcrumb-item+.breadcrumb-item::before {
+    content: "\f285";
+    font-family: gift-of-life-icons !important;
+}
+
+
 
 /* /MODIFIER COMPONENTS & CUSTOM CLASSES*/
 
@@ -843,8 +870,9 @@ footer p a:not(:last-child)::after {
 
 /* /FOOTER STYLE */
 
+
 /* ///// RESPONSIVE ///// */
-@media (max-width: 1024px) {
+@media (max-width: 1023px) {
 
     .container,
     .container-lg,
@@ -862,7 +890,7 @@ footer p a:not(:last-child)::after {
     }
 }
 
-@media (max-width: 992px) {
+@media (max-width: 991px) {
 
     .container,
     .container-lg,
