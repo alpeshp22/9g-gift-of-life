@@ -263,6 +263,7 @@
 
     .tribute-slider .img-box {
         height: 27vw;
+        filter: grayscale(0);
     }
 
     .info-section .column {
