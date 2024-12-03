@@ -104,6 +104,14 @@
     content: "\f286";
 }
 
+.gol-eye::before {
+    content: "\f341";
+}
+
+.gol-eye-slash::before {
+    content: "\f340";
+}
+
 /* SOCIAL ICONS */
 .gol-twitter-x::before {
     content: "\f8db";

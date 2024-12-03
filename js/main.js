@@ -1,10 +1,23 @@
 $(document).ready(function () {
 
-    // LOAD HEADER & FOOTER
+    //** LOAD HEADER & FOOTER
     $('header').load('header.html');
     $('footer').load('footer.html');
 
-    // TRIBUTE IMAGE SLIDER 
+    //** PASSWORD TOGGLE
+    $('.pass-toggle').on('click', function () {
+        if ($(this).hasClass('gol-eye')) {
+            $(this).removeClass('gol-eye');
+            $(this).addClass('gol-eye-slash');
+            $('.password').attr('type', 'text');
+        } else {
+            $(this).removeClass('gol-eye-slash');
+            $(this).addClass('gol-eye');
+            $('.password').attr('type', 'password');
+        }
+    });
+
+    //** TRIBUTE IMAGE SLIDER 
     $('.tribute-slider').owlCarousel({
         loop: true,
         margin: 10,

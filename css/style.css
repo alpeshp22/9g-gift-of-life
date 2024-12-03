@@ -33,9 +33,11 @@
     --button-text: 1rem;
     --x-small-text: 0.875rem;
     --padding: 120px;
+    --size-20: 1.25rem;
     --size-24: 1.5rem;
     --size-40: 2.5rem;
     --size-48: 3rem;
+    --size-80: 5rem;
     --td-03: all 0.3s ease;
     --td-05: all 0.5s ease;
 }
@@ -103,6 +105,7 @@ h2,
     font-size: 3.438rem;
     line-height: 4.125rem;
     font-weight: 500;
+    margin-bottom: var(--size-40);
 }
 
 h3,
@@ -149,6 +152,7 @@ a:hover {
 
 
 /* MODIFIER COMPONENTS &  CUSTOM CLASSES */
+
 input:not([type=submit]),
 .form-control:not([type=submit]),
 .form-select {
@@ -161,6 +165,10 @@ input:not([type=submit]),
     margin-bottom: 1rem;
     height: 51px;
     border-radius: 8px;
+}
+
+.form-group:not(:last-child) {
+    margin-bottom: 1rem;
 }
 
 input:not([type=submit])::placeholder,
@@ -178,6 +186,17 @@ input.error:not([type=submit]),
 .form-control.error:not([type=submit]),
 .form-select.error {
     border-color: var(--error-color);
+}
+
+label {
+    margin-bottom: 8px;
+    color: var(--dark-color);
+    font-weight: 400;
+}
+
+label span {
+    font-style: italic;
+    color: var(--placeholder-color);
 }
 
 .btn {
@@ -198,7 +217,9 @@ input[type=submit],
     font-family: var(--body-font);
     font-weight: 500;
     text-transform: uppercase;
-    padding: 16px 45px;
+    padding: 0 45px;
+    min-height: 51px;
+    align-content: center;
     border: none;
     border-radius: 8px;
     transition: var(--td-03);
@@ -644,6 +665,11 @@ input[type=submit]:hover:after,
     right: -80px;
 }
 
+.breadcrumb {
+    padding-top: var(--size-24);
+    margin-bottom: var(--size-48);
+}
+
 .breadcrumb-item,
 .breadcrumb-item a {
     color: var(--gray-81);
@@ -666,7 +692,15 @@ input[type=submit]:hover:after,
     font-family: gift-of-life-icons !important;
 }
 
+.mw-800 {
+    max-width: 800px;
+    margin: 0 auto;
+}
 
+.mw-856 {
+    max-width: 856px;
+    margin: 0 auto;
+}
 
 /* /MODIFIER COMPONENTS & CUSTOM CLASSES*/
 
@@ -744,14 +778,9 @@ header .offcanvas-header .close-btn {
     header .offcanvas-header {
         padding-right: calc((100vw - 1320px)/2);
     }
-}
-
-
-
-@media (max-width: 1024px) {
 
     header .offcanvas-header .close-btn {
-        margin-right: calc(var(--bs-gutter-x)* .5);
+        margin-right: calc(var(--bs-gutter-x) * 1);
     }
 }
 
@@ -870,8 +899,42 @@ footer p a:not(:last-child)::after {
 
 /* /FOOTER STYLE */
 
+/* INNER HERO SECTION */
+.inner-hero {
+    position: relative;
+}
+
+.inner-hero h1 {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.inner-hero h6 {
+    text-align: center;
+    max-width: 856px;
+    margin: 0 auto;
+}
+
+/* /INNER HERO SECTION */
+
 
 /* ///// RESPONSIVE ///// */
+@media (max-width: 1299px) {
+    .owl-carousel {
+        padding: 0 60px;
+    }
+
+    .owl-carousel .owl-nav button {
+        left: 0;
+    }
+
+    .owl-carousel .owl-nav button+button {
+        right: 0;
+    }
+}
+
+/* /1299PX */
+
 @media (max-width: 1023px) {
 
     .container,
@@ -890,13 +953,67 @@ footer p a:not(:last-child)::after {
     }
 }
 
+/* /1023PX */
+
 @media (max-width: 991px) {
+    :root {
+        --padding: 80px;
+    }
+
+    h1,
+    .h1 {
+        font-size: 3.313rem;
+        line-height: 4.25rem;
+    }
+
+    h2,
+    .h2 {
+        font-size: 2.75rem;
+        line-height: 3.438rem;
+    }
+
+    h3,
+    .h3 {
+        font-size: 2.063rem;
+        line-height: 2.625rem;
+    }
+
+    h5,
+    .h5 {
+        font-size: 1.5rem;
+        line-height: 2.063rem;
+    }
+
+    h6,
+    .h6 {
+        font-size: 1.125rem;
+        line-height: 1.575rem;
+    }
 
     .container,
     .container-lg,
     .container-md,
     .container-sm {
         max-width: 100%;
+    }
+
+    .btn,
+    .dark-blue-btn,
+    .blue-outline-btn,
+    .light-orange-btn,
+    .light-btn,
+    .light-outline-btn,
+    input[type=submit],
+    .form-control[type=submit] {
+        font-size: var(--small-text);
+        padding: 12px 35px;
+        min-height: 46px;
+        align-content: center;
+    }
+
+    .owl-carousel .owl-nav button {
+        width: 45px;
+        height: 45px;
     }
 
     footer .top {
@@ -912,7 +1029,35 @@ footer p a:not(:last-child)::after {
     }
 }
 
+/* /991PX */
+
+
 @media (max-width: 767px) {
+    :root {
+        --body-text: 1rem;
+        --large-text: 1.5rem;
+        --padding: 40px;
+    }
+
+    body,
+    p,
+    li {
+        line-height: 1.625rem;
+    }
+
+    h2,
+    .h2 {
+        font-size: 1.875rem;
+        line-height: 2.438rem;
+        margin-bottom: var(--size-20);
+    }
+
+    h3,
+    .h3 {
+        font-size: 1.625rem;
+        line-height: 2rem;
+    }
+
     header .navbar {
         height: 80px;
     }
@@ -995,9 +1140,52 @@ footer p a:not(:last-child)::after {
     footer p a {
         font-size: 0.75rem;
     }
+
+    .inner-hero h1 {
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    .breadcrumb {
+        padding-top: .5rem;
+        margin-bottom: var(--size-40);
+    }
+
+    .breadcrumb-item,
+    .breadcrumb-item a {
+        font-size: 12px;
+    }
 }
 
-@media (max-width: 575px) {
+/* /767PX */
+
+@media (max-width: 640px) {
+
+    h1,
+    .h1 {
+        font-size: 2.25rem;
+        line-height: 2.75rem;
+    }
+
+    h2,
+    .h2 {
+        font-size: 1.75rem;
+        line-height: 2.25rem;
+        margin-bottom: 1rem;
+    }
+
+    h3,
+    .h3 {
+        font-size: 1.625rem;
+        line-height: 2.25rem;
+    }
+
+    h5,
+    .h5 {
+        font-size: 1.125rem;
+        line-height: 1.625rem;
+    }
+
     header .navbar-brand {
         max-width: 180px;
     }
@@ -1011,4 +1199,40 @@ footer p a:not(:last-child)::after {
     header .offcanvas .close-btn i {
         font-size: 2rem;
     }
+
+    .breadcrumb {
+        margin-bottom: 1.875rem;
+    }
 }
+
+/* /640PX */
+
+@media (max-width: 460px) {
+    :root {
+        --padding: 25px;
+    }
+
+    .btn,
+    .dark-blue-btn,
+    .blue-outline-btn,
+    .light-orange-btn,
+    .light-btn,
+    .light-outline-btn,
+    input[type=submit],
+    .form-control[type=submit] {
+        font-size: 0.875rem;
+        padding: 10px 25px;
+    }
+
+    .owl-carousel {
+        padding: 0 2.5rem;
+    }
+
+    .owl-carousel .owl-nav button {
+        width: 30px;
+        height: 30px;
+        font-size: 1rem !important;
+    }
+}
+
+/* /460PX */
