@@ -112,6 +112,10 @@
     content: "\f340";
 }
 
+.gol-search::before {
+    content: "\f52a";
+}
+
 /* SOCIAL ICONS */
 .gol-twitter-x::before {
     content: "\f8db";

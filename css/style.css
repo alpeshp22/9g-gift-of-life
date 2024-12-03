@@ -203,6 +203,29 @@ label span {
     vertical-align: inherit;
 }
 
+.input-group {
+    border: 1px solid var(--input-border-color);
+    border-radius: 8px;
+}
+
+.input-group :where(input, select) {
+    border: 0 !important;
+    border-radius: 8px;
+    margin-bottom: 0 !important;
+}
+
+.input-group button {
+    min-height: 100%;
+    padding: 0;
+    width: 50px;
+    line-height: 50px;
+    text-align: center;
+    border: 0;
+    border-radius: 0;
+    background-color: transparent;
+    color: var(--placeholder-color);
+}
+
 .btn,
 .dark-blue-btn,
 .blue-outline-btn,
@@ -629,6 +652,16 @@ input[type=submit]:hover:after,
 .section:has(+.color-section),
 .section:last-child,
 .section:has(+footer) {
+    padding-bottom: var(--padding);
+}
+
+.section-small {
+    padding-top: var(--size-80);
+}
+
+.section-small:has(+.color-section),
+.section-small:last-child,
+.section-small:has(+footer) {
     padding-bottom: var(--padding);
 }
 

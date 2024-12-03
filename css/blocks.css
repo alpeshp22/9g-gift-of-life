@@ -291,6 +291,90 @@
 
 /* /AUTHANTICATION PAGES STYLE */
 
+/* ALERT SECTION */
+.alert-section .alert {
+    padding: 2.5rem 2.75rem;
+    background-color: var(--light-gray-color);
+    margin-bottom: 0;
+}
+
+.alert-section .alert * {
+    font-size: var(--body-text);
+    color: var(--black-color);
+}
+
+/* /ALERT SECTION */
+
+/* SEARCH SECTION */
+
+.search-section .row {
+    row-gap: var(--size-40);
+}
+
+.donor-list .Col {
+    opacity: 1;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.donor-list .Col.d-none {
+    opacity: 0;
+    transform: scale(0.9);
+    pointer-events: none;
+    /* Prevent interaction with hidden elements */
+}
+
+.searched-card .img-wrap {
+    position: relative;
+    width: 100%;
+    height: 217px;
+    background-color: #DCDCDC;
+    border-radius: 4px;
+    border: 1px solid var(--placeholder-color);
+    margin-bottom: 8px;
+}
+
+.searched-card .img-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.searched-card p {
+    margin-bottom: 0;
+}
+
+.search-filter {
+    margin-bottom: var(--size-80);
+}
+
+.search-filter .Colm {
+    position: relative;
+}
+
+.search-filter .Colm:not(:last-child):after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 1px;
+    height: 100%;
+    background-color: var(--placeholder-color);
+}
+
+.alpha-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .5rem;
+    color: var(--placeholder-color);
+}
+
+.alpha-list span:hover,
+.alpha-list span.active {
+    color: var(--secondary-color);
+}
+
+/* /SEARCH SECTION */
+
 /* RESPONSIVE */
 @media (max-width: 1199px) {
     .tribute-slider .img-box {
