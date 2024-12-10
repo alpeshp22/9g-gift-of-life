@@ -65,4 +65,26 @@ $(document).ready(function () {
             input.attr('type', 'password');
         }
     });
+
+    /////// UPDATE PROFILE
+    let isEditing = false; // Track editing state
+
+    $('#updateProfileForm button').on('click', function () {
+        if (isEditing) {
+            $('#upFirstName, #upLastName, #upEmail').attr('disabled', true);
+            $(this).text('UPDATE PROFILE');
+            isEditing = false;
+
+            $('#success-message').removeClass('d-none');
+
+            setTimeout(function () {
+                $('#success-message').addClass('d-none');
+            }, 5000);
+        } else {
+            $('#upFirstName, #upLastName, #upEmail').attr('disabled', false);
+            $(this).text('SUBMIT');
+            isEditing = true;
+        }
+    });
+
 });

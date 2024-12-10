@@ -168,11 +168,10 @@ input:not([type=submit]),
 }
 
 .form-group:not(:last-child) {
-    margin-bottom: 1rem;
+    margin-bottom: var(--size-24);
 }
 
-input:not([type=submit])::placeholder,
-.form-control:not([type=submit]) {
+.form-control:disabled {
     color: var(--placeholder-color);
 }
 
@@ -645,6 +644,27 @@ input[type=submit]:hover:after,
     color: var(--black-color) !important;
 }
 
+
+.mt-40,
+.my-40 {
+    margin-top: var(--size-40);
+}
+
+.mb-40,
+.my-40 {
+    margin-bottom: var(--size-40);
+}
+
+.mt-80,
+.my-80 {
+    margin-top: var(--size-80);
+}
+
+.mb-80,
+.my-80 {
+    margin-bottom: var(--size-80);
+}
+
 .section {
     padding-top: var(--padding);
 }
@@ -757,6 +777,7 @@ input[type=submit]:hover:after,
     border-top: 0;
     border-bottom: .3em solid;
 }
+
 
 /* /MODIFIER COMPONENTS & CUSTOM CLASSES*/
 
@@ -972,6 +993,44 @@ footer p a:not(:last-child)::after {
 }
 
 /* /INNER HERO SECTION */
+
+
+/* MY ACCOUNT FORM STYLE */
+div.form-control {
+    color: var(--black-color) !important;
+    align-content: center;
+}
+
+.pass-group {
+    position: relative;
+}
+
+.pass-group i {
+    position: absolute;
+    right: 1rem;
+    top: .8rem;
+    cursor: pointer;
+    font-size: 1.35rem;
+    color: var(--placeholder-color);
+}
+
+.account-form-wrapper {
+    position: relative;
+    padding: var(--size-40);
+    border: 1px solid #E5E5EA;
+    border-radius: 1rem;
+}
+
+.account-form-wrapper form {
+    max-width: 416px;
+    margin: 0 auto;
+}
+
+.account-form-wrapper .form-group .form-control {
+    margin-bottom: 0;
+}
+
+/* /MY ACCOUNT FORM STYLE */
 
 
 /* ///// RESPONSIVE ///// */

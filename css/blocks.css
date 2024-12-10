@@ -421,8 +421,8 @@
 }
 
 .account-menu .dropdown-menu a:last-child:hover {
-    color: var(--error-color);
-    background-color: rgba(from var(--error-color) r g b / 0.2);
+    color: var(--white-color);
+    background-color: var(--error-color);
 }
 
 @media (min-width: 576px) {
