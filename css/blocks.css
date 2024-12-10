@@ -270,7 +270,7 @@
     position: relative;
 }
 
-.pass-group .pass-toggle {
+.pass-group i {
     position: absolute;
     right: 1rem;
     top: .8rem;
@@ -375,6 +375,109 @@
 
 /* /SEARCH SECTION */
 
+/* MY TRIBUTES PAGE */
+.account-menu .btn {
+    width: 100%;
+    background-color: var(--primary-color);
+    color: var(--light-gray-color);
+    margin-bottom: 1rem;
+}
+
+.account-menu .btn:hover {
+    color: var(--light-gray-color);
+    background-color: var(--blue-color);
+}
+
+.account-menu .dropdown-menu {
+    min-width: 100%;
+    width: 100%;
+    border-radius: 1rem;
+    padding: 0;
+    overflow: hidden;
+    border: 0;
+}
+
+.account-menu .dropdown-menu a {
+    padding: 1rem;
+    color: var(--gray-color);
+    background-color: var(--light-gray-color);
+    white-space: normal;
+}
+
+.account-menu .dropdown-menu a:not(:last-child) {
+    border-bottom: 1px solid rgba(60, 60, 67, 0.29);
+
+}
+
+.account-menu .dropdown-menu a:hover,
+.account-menu .dropdown-menu a.active {
+    color: var(--secondary-color);
+    background-color: var(--light-orange-color);
+}
+
+.account-menu .dropdown-menu a.active {
+    font-weight: 700;
+    border-color: var(--light-orange-color);
+}
+
+.account-menu .dropdown-menu a:last-child:hover {
+    color: var(--error-color);
+    background-color: rgba(from var(--error-color) r g b / 0.2);
+}
+
+@media (min-width: 576px) {
+    .account-menu {
+        position: sticky;
+        top: var(--size-24);
+    }
+
+    .account-menu .btn {
+        display: none;
+    }
+
+    .account-menu .dropdown-menu {
+        display: block;
+    }
+}
+
+.my-tribute-card {
+    position: relative;
+    width: 100%;
+    border-radius: 16px;
+    padding: 1rem;
+    border: 1px solid #E5E5EA;
+    margin-bottom: var(--size-40);
+    display: flex;
+    align-items: flex-end;
+}
+
+.my-tribute-card img {
+    width: 12.75rem;
+    height: 8.313rem;
+    border-radius: 16px;
+    object-fit: cover;
+}
+
+.my-tribute-card .card-content {
+    flex: 1;
+    padding-left: 1rem;
+}
+
+.my-tribute-card h5 {
+    border-bottom: 1px solid #E5E5EA;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+}
+
+.my-tribute-card .card-content a:not(:last-child) {
+    margin-right: 1rem;
+}
+
+/* /MY TRIBUTES PAGE */
+
+
+/* ///// RESPONSIVE ///// */
+
 /* RESPONSIVE */
 @media (max-width: 1199px) {
     .tribute-slider .img-box {
@@ -449,6 +552,23 @@
         position: relative;
         padding-top: var(--size-48);
     }
+
+    .my-tribute-card {
+        flex-direction: column;
+        align-items: flex-start;
+        row-gap: var(--size-20);
+        text-align: center;
+    }
+
+    .my-tribute-card img {
+        margin: 0 auto;
+    }
+
+    .my-tribute-card .card-content {
+        flex: inherit;
+        padding-left: 0;
+        width: 100%;
+    }
 }
 
 /* /991PX */
@@ -490,7 +610,7 @@
 
 /* /768PX */
 
-@media (max-width: 640px) {
+@media (max-width: 576px) {
     .hero-section .cursive-font {
         font-size: 4.25rem;
         line-height: 3.75rem;
@@ -510,9 +630,13 @@
         line-height: var(--size-24);
         padding: 1rem 0 .5rem 0;
     }
+
+    .account-menu .dropdown-menu {
+        box-shadow: 0 5px 10px rgba(0 0 0 / 20%);
+    }
 }
 
-/* /640PX */
+/* /576PX */
 
 @media (max-width: 460px) {
     .hero-section {

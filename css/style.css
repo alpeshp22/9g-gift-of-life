@@ -199,10 +199,6 @@ label span {
     color: var(--placeholder-color);
 }
 
-.btn {
-    vertical-align: inherit;
-}
-
 .input-group {
     border: 1px solid var(--input-border-color);
     border-radius: 8px;
@@ -212,6 +208,11 @@ label span {
     border: 0 !important;
     border-radius: 8px;
     margin-bottom: 0 !important;
+}
+
+.year-select {
+    background-image: url('../images/calendar-icon.svg');
+    background-size: 20px;
 }
 
 .input-group button {
@@ -250,7 +251,7 @@ input[type=submit],
     z-index: 1;
 }
 
-.btn,
+.btn-primary,
 input[type=submit],
 .form-control[type=submit],
 .btn:hover,
@@ -261,7 +262,7 @@ input[type=submit]:hover,
     color: var(--black-color);
 }
 
-.btn:after,
+.btn-primary:after,
 input[type=submit]:after,
 .form-control[type=submit]:after {
     content: '';
@@ -276,7 +277,7 @@ input[type=submit]:after,
     transition: var(--td-05);
 }
 
-.btn:hover:after,
+.btn-primary:hover:after,
 input[type=submit]:hover:after,
 .form-control[type=submit]:hover:after {
     width: 100%;
@@ -733,6 +734,28 @@ input[type=submit]:hover:after,
 .mw-856 {
     max-width: 856px;
     margin: 0 auto;
+}
+
+.mini-container {
+    max-width: 856px;
+    margin: 0 auto;
+}
+
+.modal-dialog {
+    max-width: 856px;
+}
+
+.modal-content {
+    border-radius: 1rem;
+}
+
+.modal-body {
+    padding: var(--size-40);
+}
+
+.dropdown-toggle[aria-expanded="true"]::after {
+    border-top: 0;
+    border-bottom: .3em solid;
 }
 
 /* /MODIFIER COMPONENTS & CUSTOM CLASSES*/
