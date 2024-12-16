@@ -1275,6 +1275,7 @@ label.form-control {
     border-right: 1px solid var(--input-border-color);
 }
 
+.iti--separate-dial-code .iti__selected-flag,
 .iti--allow-dropdown .iti__flag-container:hover .iti__selected-flag {
     background-color: var(--transparent);
 }
@@ -1293,6 +1294,30 @@ label.form-control {
 .iti--allow-dropdown input[type=tel] {
     padding-left: 64px;
 }
+
+.iti__selected-flag .iti__flag {
+    display: none;
+}
+
+.iti--separate-dial-code .iti__selected-dial-code {
+    margin-left: 0;
+    color: var(--placeholder-color);
+}
+
+.iti--inline-dropdown .iti__dropdown-content {
+    border-radius: 8px;
+    scrollbar-width: 3px;
+    scrollbar-color: var(--secondary-color) var(--white-color);
+}
+
+.iti__dropdown-content input.iti__search-input {
+    padding: 1rem;
+    border-width: 0 0 1px 0;
+    border-radius: 0;
+    background-color: transparent;
+}
+
+/* /CONTACT US SECTION */
 
 /* ///// RESPONSIVE //////////////////////////////////////////////////////////// */
 @media (max-width: 1299px) {

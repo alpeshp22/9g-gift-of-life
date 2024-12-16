@@ -13,7 +13,7 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/owl.theme.default.min.css">
     <link rel="stylesheet" href="css/owl.carousel.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/css/intlTelInput.css">
+    <link rel="stylesheet" href="css/intlTelInput.min.css">
 
     <!-- CUSTOM STYLES -->
     <link rel="stylesheet" href="css/gol-icon.css" />
@@ -89,7 +89,7 @@
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/owl.carousel.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/js/intlTelInput.min.js"></script>
+    <script src="js/intlTelInput.min.js"></script>
     <script src="js/main.js"></script>
     <script>
         $(document).ready(function () {
@@ -97,7 +97,8 @@
             window.intlTelInput(input, {
                 initialCountry: "us",
                 preferredCountries: ["us", "gb", "in"],
-                // separateDialCode: true,
+                separateDialCode: false,
+                strictMode: true,
                 utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/js/utils.js"
             });
         });
