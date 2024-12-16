@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" media="(prefers-color-scheme: light)" content="#003764" />
+    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#EE7700" />
+    <title>Gift of Life | Tribute Submission Page</title>
+    <link rel="icon" href="favicon-dark.ico" type="image/x-icon" media="(prefers-color-scheme: light)">
+    <link rel="icon" href="favicon-light.ico" type="image/x-icon" media="(prefers-color-scheme: dark)">
+    <!-- REQUIRED STYLES -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <!-- CUSTOM STYLES -->
+    <link rel="stylesheet" href="css/gol-icon.css" />
+    <link href="css/style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/blocks.css" />
+</head>
+
+<body>
+    <!-- HEADER -->
+    <header></header>
+    <!-- /HEADER -->
+
+    <!-- MAIN -->
+    <main>
+
+        <!-- BREADCRUMBS -->
+        <section class="breadcrumb-sec">
+            <div class="container">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Tribute Submission</li>
+                </ol>
+            </div>
+        </section>
+        <!-- /BREADCRUMBS -->
+
+        <!-- INNER HERO -->
+        <section class="inner-hero">
+            <div class="container">
+                <h1>Legacies of Love Tributes
+                    Submission Page</h1>
+                <h6>Read the information below before starting your tribute for guidance to help
+                    make the process as easy as possible.</h6>
+        </section>
+        <!-- /INNER HERO -->
+
+        <!-- ALERT SECTION -->
+        <section class="alert-section section-small">
+            <div class="container">
+                <div class="alert">
+                    When you submit a tribute to Legacies of Love, a member of the Family Support Services Team will
+                    review your submission including the text narrative and images to ensure that everything looks okay.
+                    When approved, your Tribute will be published. If there are any issues, we will contact you to
+                    discuss. Thank you very much for submitting a Tribute.
+
+                    <a href="javascript:void(0);">Before submitting, please review the Tributes Instruction page. <i
+                            class="gol-box-arrow-up-right ms-1"></i></a>
+                </div>
+            </div>
+        </section>
+        <!-- /ALERT SECTION -->
+
+        <section class="create-tribute-sec section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-8 c0l-lg-10 mx-auto">
+                        <h2>Your Loved One’s Information</h2>
+                        <form action="#" class="create-tribute-frm" id="createTributeForm">
+                            <div class="row gx-lg-4 gx-sm-2">
+                                <div class="form-group col-sm-4">
+                                    <label for="firstName">First Name <span>(Required)</span></label>
+                                    <input type="text" class="form-control" id="firstName" name="firstName"
+                                        placeholder="First Name">
+                                </div>
+                                <div class="form-group col-sm-4">
+                                    <label for="middleName">Middle Name</label>
+                                    <input type="text" class="form-control" id="middleName" name="middleName"
+                                        placeholder="Middle Name">
+                                </div>
+                                <div class="form-group col-sm-4">
+                                    <label for="lastName">Last Name <span>(Required)</span></label>
+                                    <input type="text" class="form-control" id="lastName" name="lastName"
+                                        placeholder="Last Name">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="form-group col-lg-6">
+                                    <label for="nickName">Nick Name</label>
+                                    <input type="text" class="form-control" id="nickName" name="nickName"
+                                        placeholder="Nick Name">
+                                </div>
+                            </div>
+                            <div class="row gx-lg-4 gx-sm-2">
+                                <div class="form-group col-sm-6">
+                                    <label for="dob">Date of Birth <span>(Required)</span></label>
+                                    <input type="date" class="form-control" id="dob" name="dob"
+                                        placeholder="MM/DD/YYYY">
+                                </div>
+                                <div class="form-group col-sm-6">
+                                    <label for="dod">Date of Donation <span>(Required)</span></label>
+                                    <input type="date" class="form-control" id="dod" name="dod"
+                                        placeholder="MM/DD/YYYY">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="ctHospitalSearch">Hospital Where Loved One Died</label>
+                                <select class="form-select" name="ctHospitalSearch" id="ctHospitalSearch">
+                                    <option value="Hospital Search">Hospital Search</option>
+                                    <option value="Hospital 1">Hospital 1</option>
+                                    <option value="Hospital 2">Hospital 2</option>
+                                    <option value="Hospital 3">Hospital 3</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="yourTribute">Your Tribute <span>(Required)</span></label>
+                                <textarea class="form-control charCountArea" rows="10" name="yourTribute"
+                                    id="yourTribute"
+                                    placeholder="Share tribute or story about your loved one"></textarea>
+                                <div
+                                    class="sub-label char-counter d-flex justify-content-between align-items-center mt-1">
+                                    <span>(Limit to about 500 words or about 3000 characters with spaces)</span>
+                                    <span>
+                                        Characters: <span class="charCount">####</span>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="highlightPullout" class="d-lg-flex g-1 justify-content-between">
+                                    Highlight Text or Pullout
+                                    <i class="gol-exclamation-circle" data-bs-toggle="tooltip"
+                                        data-bs-title="Highlight Text or Pullout"
+                                        data-bs-custom-class="custom-tooltip"></i>
+                                </label>
+                                <textarea class="form-control charCountArea" rows="5" name="highlightPullout"
+                                    id="highlightPullout"
+                                    placeholder="Enter a thought or special sentiment that you’d like to highlight or call out."></textarea>
+                                <div
+                                    class="sub-label char-counter d-flex justify-content-between align-items-center mt-1">
+                                    <span>(Limit to about 500 words or about 3000 characters with spaces)</span>
+                                    <span>
+                                        Characters: <span class="charCount">####</span>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="yourSignature" class="d-lg-flex g-1 justify-content-between">
+                                    Your Signature <span class="ms-1 me-auto">(Required)</span>
+                                    <i class="gol-exclamation-circle" data-bs-toggle="tooltip"
+                                        data-bs-title="Your Signature" data-bs-custom-class="custom-tooltip"></i>
+                                </label>
+                                <input type="text" class="form-control charCountArea" id="yourSignature"
+                                    name="yourSignature" placeholder="Enter Signature">
+                                <div
+                                    class="sub-label char-counter d-flex justify-content-between align-items-center mt-1">
+                                    <span>(Limit to about 500 words or about 3000 characters with spaces)</span>
+                                    <span>
+                                        Characters: <span class="charCount">####</span>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>Photos</label>
+                                <p class="upld-label mb-3">
+                                    You may upload up to 4 photos. Each photo file should be no more than
+                                    <strong>2mb</strong> in size.
+                                    See our <span>recommendations</span> for
+                                    photo type and
+                                    size.
+                                </p>
+                                <div class="photo-upload-view" id="photoUploadView">
+                                    <img src="images/click-to-upload.svg" class="img-fluid"
+                                        alt="Click to Upload Image" />
+                                </div>
+                                <p class="sub-label text-end" id="uploadCount"></p>
+                            </div>
+                            <div class="form-group photo-list" id="photoList">
+                                <!-- Dynamic Items will be added here -->
+                            </div>
+                            <div class="form-group">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="creTriCheck1">
+                                    <label class="form-check-label" for="creTriCheck1">
+                                        By clicking the checkbox, I agree to publish my tribute and understand that
+                                        all
+                                        visitors to this site will be able to view and read my tribute. I understand
+                                        that my Tribute submission will be reviewed prior to publishing and that I
+                                        may
+                                        be contacted if there are any issues with my submission.
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="creTriCheck2">
+                                    <label class="form-check-label" for="creTriCheck2">
+                                        I would like a Family Support Services counselor to contact me.
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="creTriCheck3">
+                                    <label class="form-check-label" for="creTriCheck3">
+                                        Please add me to the Gift of Life Donor Program email list.
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="form-group mb-0">
+                                <button class="btn btn-primary" type="submit">Save Yor Tribute</button>
+                            </div>
+                            <p class="sub-label d-lg-flex g-1 justify-content-between mt-2 mb-0">
+                                You can save and preview your tribute before submitting
+                                or save and finish later if you wish.
+                            </p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    <!-- /MAIN -->
+
+    <!-- FOOTER -->
+    <footer></footer>
+    <!-- /FOOTER -->
+
+    <!-- UPLOAD PHOTO POPUP -->
+    <div class="modal fade upld-img-popup" id="uploadImgPopup" tabindex="-1" aria-hidden="true"
+        data-bs-backdrop="static">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <form action="#" class="uplod-img-frm" id="uploadImgForm">
+                        <div class="form-group">
+                            <div class="img-wrapper">
+                                <div class="img-box">
+                                    <img src="images/photo-placeholder-img.webp" id="popupImagePreview"
+                                        class="img-fluid" alt="upload image" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="form-check mx-auto">
+                                <input class="form-check-input" type="checkbox" value="" id="featureImageCheck" />
+                                <label class="form-check-label" for="featureImageCheck">
+                                    Use this image as feature image.
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="imageCaption">
+                                Image Caption
+                                <span>(Limit to about 100 characters with spaces)</span>
+                            </label>
+                            <input type="text" class="form-control" id="imageCaption" name="imageCaption"
+                                placeholder="Write a caption for the image uploaded." maxlength="100">
+                        </div>
+                        <div class="text-center mt-40">
+                            <button type="button" id="save-caption" class="btn btn-primary">Save</button>
+                            <button type="button" class="btn blue-outline-btn ms-3"
+                                data-bs-dismiss="modal">Cancel</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /UPLOAD PHOTO POPUP -->
+
+
+    <!-- REQUIRED STYLES -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/main.js"></script>
+    <!-- CREATE TRIBUTE PAGE UPLOAD PHOTOS -->
+    <script src="js/upload-photos.js"></script>
+</body>
+
+</html>

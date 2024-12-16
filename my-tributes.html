@@ -26,13 +26,20 @@
 
     <!-- MAIN -->
     <main>
-        <!-- INNER HERO -->
-        <section class="inner-hero">
+        <!-- BREADCRUMBS -->
+        <section class="breadcrumb-sec">
             <div class="container">
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="index.html">Home</a></li>
                     <li class="breadcrumb-item active" aria-current="page">My Tributes</li>
                 </ol>
+            </div>
+        </section>
+        <!-- /BREADCRUMBS -->
+
+        <!-- INNER HERO -->
+        <section class="inner-hero">
+            <div class="container">
                 <h1>My Tributes</h1>
                 <h6>Your tribute is below. Click to edit if you'd like to make changes.</h6>
             </div>
@@ -43,7 +50,7 @@
         <section class="account-section section">
             <div class="container">
                 <div class="row justify-content-center">
-                    <div class="col-xl-3 col-sm-4">
+                    <div class="col-xl-3 col-md-4 Col">
                         <div class="dropdown account-menu">
                             <a class="btn dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                                 aria-expanded="false">
@@ -53,19 +60,19 @@
                                 <a href="my-tributes.html" class="dropdown-item active">My Tributes</a>
                                 <a href="my-profile.html" class="dropdown-item">My Profile</a>
                                 <a href="change-password.html" class="dropdown-item">Change Password</a>
-                                <a href="javascript:void(0);" class="dropdown-item">Log Out</a>
+                                <a href="login.html" class="dropdown-item">Log Out</a>
                             </ul>
                         </div>
                     </div>
-                    <div class="col-xl-6 col-sm-8">
+                    <div class="col-xl-6 col-md-8 Col">
                         <div class="my-tribute-card">
                             <img src="https://i.ibb.co/HhcbJf2/memorial-tributes3.png" class="img-fluid"
                                 alt="tribute image" />
                             <div class="card-content">
                                 <h5>Mary Patricia Thompson</h5>
-                                <a href="javascript:void(0);" class="edit-link-btn" title="Edit Tribute">Edit</a>
-                                <a href="javascript:void(0);" class="privew-link-btn" title="Privew Tribute">Privew</a>
-                                <a href="#exampleModal" class="delete-link-btn" data-bs-toggle="modal"
+                                <a href="edit-tribute.html" class="edit-link-btn" title="Edit Tribute">Edit</a>
+                                <a href="preview-tribute.html" class="privew-link-btn" title="Privew Tribute">Privew</a>
+                                <a href="#deleteTributePopup" class="delete-link-btn" data-bs-toggle="modal"
                                     title="Delete Tribute">Delete</a>
                             </div>
                         </div>
@@ -73,14 +80,14 @@
                             <img src="https://i.ibb.co/RTrVbgh/Mask-group.png" class="img-fluid" alt="tribute image" />
                             <div class="card-content">
                                 <h5>Arnold Thompson</h5>
-                                <a href="javascript:void(0);" class="edit-link-btn" title="Edit Tribute">Edit</a>
-                                <a href="javascript:void(0);" class="privew-link-btn" title="Privew Tribute">Privew</a>
-                                <a href="#exampleModal" class="delete-link-btn" data-bs-toggle="modal"
+                                <a href="edit-tribute.html" class="edit-link-btn" title="Edit Tribute">Edit</a>
+                                <a href="preview-tribute.html" class="privew-link-btn" title="Privew Tribute">Privew</a>
+                                <a href="#deleteTributePopup" class="delete-link-btn" data-bs-toggle="modal"
                                     title="Delete Tribute">Delete</a>
                             </div>
                         </div>
                         <div class="mt-40 text-center text-sm-start">
-                            <a href="javascript:void(0);" class="btn btn-primary">Create a Tribute</a>
+                            <a href="tribute-submission.html" class="btn btn-primary">Create a Tribute</a>
                         </div>
                     </div>
                 </div>
@@ -95,7 +102,7 @@
     <!-- /FOOTER -->
 
     <!-- TRIBUTE DELETE POPUP -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="deleteTributePopup" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-body">

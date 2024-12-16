@@ -1,0 +1,14 @@
+stages:
+    - build
+build-gol:
+    stage: build
+    before_script:
+        - export USER=$USER
+        - export IPADDRESS=$IPADDRESS
+        - export PORT=$PORT
+    script:
+        - rsync -rvz --delete -e "ssh -o StrictHostKeyChecking=no -p $PORT" --progress /home/gitlab-runner/builds/t3_sPfkyy/0/html3101349/gift_of_life/* $USER@$IPADDRESS:/var/www/htmlprojects/gift_of_life
+    tags:
+        - gol_runner
+    only:
+        - dev_html 

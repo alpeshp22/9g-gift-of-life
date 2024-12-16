@@ -1,23 +1,16 @@
 $(document).ready(function () {
 
-    //** LOAD HEADER & FOOTER
+    /////// LOAD HEADER & FOOTER
     $('header').load('header.html');
     $('footer').load('footer.html');
 
-    //** PASSWORD TOGGLE
-    // $('.pass-toggle').on('click', function () {
-    //     if ($(this).hasClass('gol-eye')) {
-    //         $(this).removeClass('gol-eye');
-    //         $(this).addClass('gol-eye-slash');
-    //         $('.password').attr('type', 'text');
-    //     } else {
-    //         $(this).removeClass('gol-eye-slash');
-    //         $(this).addClass('gol-eye');
-    //         $('.password').attr('type', 'password');
-    //     }
-    // });
+    /////// BOOTSTARP TOOLTIP
+    const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+    const tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl);
+    });
 
-    //** TRIBUTE IMAGE SLIDER 
+    /////// TRIBUTE IMAGE SLIDER 
     $('.tribute-slider').owlCarousel({
         loop: true,
         margin: 10,
@@ -28,7 +21,9 @@ $(document).ready(function () {
         navText: ["<i class='gol-chevron-left'>", "<i class='gol-chevron-right'>"],
         responsive: {
             0: {
-                items: 2
+                items: 2,
+                margin: 30,
+                center: true
             },
             460: {
                 items: 3,
@@ -57,7 +52,6 @@ $(document).ready(function () {
     /////// PASSWORD SHOW & HIDE WITH ICON
     $('.pass-group i').click(function () {
         $(this).toggleClass("gol-eye gol-eye-slash");
-        // var input = $($(this).attr('toggle'));
         var input = $(this).siblings('.pass-group input');
         if (input.attr('type') == 'password') {
             input.attr('type', 'text');
@@ -66,25 +60,28 @@ $(document).ready(function () {
         }
     });
 
-    /////// UPDATE PROFILE
-    let isEditing = false; // Track editing state
+    /////// PRIVIEW TRIBUTE SLIDER
+    $('.pre-tribute-slider').owlCarousel({
+        loop: true,
+        items: 1,
+        margin: 10,
+        nav: true,
+        fade: true,
+        autoplay: 3000,
+        smartSpeed: 1000,
+        dots: false,
+        navText: ["<i class='gol-chevron-left'>", "<i class='gol-chevron-right'>"]
+    });
 
-    $('#updateProfileForm button').on('click', function () {
-        if (isEditing) {
-            $('#upFirstName, #upLastName, #upEmail').attr('disabled', true);
-            $(this).text('UPDATE PROFILE');
-            isEditing = false;
-
-            $('#success-message').removeClass('d-none');
-
-            setTimeout(function () {
-                $('#success-message').addClass('d-none');
-            }, 5000);
-        } else {
-            $('#upFirstName, #upLastName, #upEmail').attr('disabled', false);
-            $(this).text('SUBMIT');
-            isEditing = true;
-        }
+    /////// TEXTAREACHARACTER COUNT
+    // Update character count on page load and on input
+    $('.charCountArea').on('input', function () {
+        const charCount = $(this).val().length;
+        $(this).siblings('.char-counter').find('.charCount').text(charCount);
+    }).each(function () {
+        // Ensure initial count is set for pre-filled text
+        const charCount = $(this).val().length;
+        $(this).siblings('.char-counter').find('.charCount').text(charCount);
     });
 
 });
