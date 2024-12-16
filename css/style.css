@@ -1251,7 +1251,50 @@ label.form-control {
 
 /* /AUTHENTICATION SECTION */
 
-/* ///// RESPONSIVE ///// */
+/* CONTACT US SECTION */
+.cantact-sec {
+    position: relative;
+    padding-top: var(--size-80);
+}
+
+.cantact-sec form {
+    position: relative;
+    max-width: 855px;
+    margin: 0 auto;
+}
+
+.iti {
+    display: block;
+}
+
+.iti__flag-container {
+    padding: 2px 1px;
+}
+
+.iti__selected-flag {
+    border-right: 1px solid var(--input-border-color);
+}
+
+.iti--allow-dropdown .iti__flag-container:hover .iti__selected-flag {
+    background-color: var(--transparent);
+}
+
+.iti__arrow {
+    border: 0;
+    width: 10px;
+    height: 10px;
+    background-image: url(../images/chevron-down.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+    margin-left: 8px;
+}
+
+.iti--allow-dropdown input[type=tel] {
+    padding-left: 64px;
+}
+
+/* ///// RESPONSIVE //////////////////////////////////////////////////////////// */
 @media (max-width: 1299px) {
 
     h3,
