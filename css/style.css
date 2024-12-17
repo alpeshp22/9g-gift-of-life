@@ -324,8 +324,8 @@ input[type=submit],
 input[type=submit]:hover,
 .form-control[type=submit]:hover {
     border: none;
-    background-color: var(--secondary-color);
-    color: var(--black-color);
+    background-color: var(--secondary-color) !important;
+    color: var(--black-color) !important;
 }
 
 .btn-primary:after,
@@ -1271,7 +1271,8 @@ label.form-control {
     padding: 2px 1px;
 }
 
-.iti__selected-flag {
+.iti__selected-flag,
+.iti__selected-country {
     border-right: 1px solid var(--input-border-color);
 }
 
@@ -1292,7 +1293,7 @@ label.form-control {
 }
 
 .iti--allow-dropdown input[type=tel] {
-    padding-left: 64px;
+    padding-left: 60px !important;
 }
 
 .iti__selected-flag .iti__flag {
