@@ -1,173 +1,174 @@
-$(document).ready(function () {
-    const maxPhotos = 4;
-    const maxFileSize = 2 * 1024 * 1024; // 2 MB
-    let photoCount = 0;
-    let currentEditingItem = null;
-    let isFileInputOpen = false; // Flag to check if file input is open
-    let featuredItem = null; // Track the currently featured item
+const MAX_IMAGES = 4;
+const MAX_SIZE = 2 * 1024 * 1024; // 2MB
+let images = [];
+let editingIndex = null;
 
-    const updatePhotoCount = () => {
-        $("#uploadCount").text(`${photoCount}/${maxPhotos} uploaded`);
+// Update counter
+function updateCounter() {
+    $("#uploadCounter").text(`${images.length}/${MAX_IMAGES}`);
+}
 
-        if (photoCount >= maxPhotos) {
-            $("#photoUploadView").addClass("disabled");
-            $("#photoUploadView").off("click dragover dragleave drop"); // Disable all events
-        } else {
-            $("#photoUploadView").removeClass("disabled");
-            bindPhotoUploadEvents();
-        }
-    };
-
-    const addPhotoToList = (imageSrc, caption = "", isFeature = false) => {
-        const placeholder = caption.trim()
-            ? caption
-            : "Click on edit to add a caption.";
-        const featureBadge = isFeature ? `Featured` : "";
-        const photoItem = `
-    <div class="item" data-feature="${isFeature}">
-      <img src="${imageSrc}" alt="Uploaded Photo" />
-      <div class="content">
-        <p>${placeholder}</p>
-      </div>
-      <div>
-        <button type="button" class="btn btn-edit"><i class="gol-edit"></i></button>
-        <button type="button" class="btn btn-delete"><i class="gol-trash"></i></button>
-      </div>
-    </div>
-  `;
-        $("#photoList").append(photoItem);
-
-        if (isFeature) {
-            updateFeaturedItem($("#photoList .item").last());
-        }
-
-        photoCount++;
-        updatePhotoCount();
-    };
-
-    const updateFeaturedItem = (newFeaturedItem) => {
-        if (featuredItem) {
-            featuredItem.find(".badge").remove(); // Remove the badge from the previously featured item
-            featuredItem.data("feature", false);
-        }
-        if (newFeaturedItem) {
-            newFeaturedItem.find(".content").prepend('<span class="badge">Featured</span>');
-            newFeaturedItem.data("feature", true);
-            featuredItem = newFeaturedItem;
-        } else {
-            featuredItem = null;
-        }
-    };
-
-    // Show error message
-    const showError = (message) => {
-        const errorElement = `<p class="error-message" style="color: red; font-size: 12px; margin-top: 5px;">${message}</p>`;
-        $(".photo-upload-view").next(".error-message").remove(); // Remove existing error messages
-        $(".photo-upload-view").after(errorElement); // Add new error message after the photo upload view
-    };
-
-    // Clear error message
-    const clearError = () => {
-        $(".photo-upload-view").next(".error-message").remove(); // Remove any existing error message
-    };
-
-
-    const handleFileUpload = (files) => {
-        const fileInput = $("#fileInput");
-        fileInput.prop("disabled", true);
-
-        if (photoCount >= maxPhotos) {
-            showError("You can only upload up to 4 photos.");
-            return;
-        } else {
-            clearError();
-        }
-
-        for (const file of files) {
-            if (file.size > maxFileSize) {
-                showError(`File size should not more then 2MB.`);
-                continue;
-            } else {
-                clearError();
-            }
-
-            const reader = new FileReader();
-            reader.onload = (e) => {
-                currentEditingItem = null; // Reset current editing item for new uploads
-                $("#popupImagePreview").attr("src", e.target.result);
-                $("#imageCaption").val("");
-                $("#featureImageCheck").prop("checked", false);
-                $("#uploadImgPopup").modal("show");
-            };
-            reader.readAsDataURL(file);
-        }
-
-        fileInput.prop("disabled", false);
-        isFileInputOpen = false;
-    };
-
-    $(document).on("click", "#save-caption", function () {
-        const caption = $("#imageCaption").val();
-        const isFeature = $("#featureImageCheck").is(":checked");
-
-        if (currentEditingItem) {
-            const placeholder = caption.trim()
-                ? caption
-                : "Click on edit to add a caption.";
-            currentEditingItem.find("p").text(placeholder);
-
-            // Update the badge and feature status
-            if (isFeature) {
-                updateFeaturedItem(currentEditingItem);
-            } else if (currentEditingItem.data("feature")) {
-                updateFeaturedItem(null);
-            }
-        } else {
-            const imageSrc = $("#popupImagePreview").attr("src");
-            addPhotoToList(imageSrc, caption, isFeature);
-        }
-
-        $("#uploadImgPopup").modal("hide");
-    });
-
-    $(document).on("click", ".btn-delete", function () {
-        const item = $(this).closest(".item");
-        if (item.data("feature")) {
-            updateFeaturedItem(null); // Clear the featured item if the deleted item is featured
-        }
-        item.remove();
-        photoCount--;
-        updatePhotoCount();
-    });
-
-    $(document).on("click", ".btn-edit", function () {
-        const item = $(this).closest(".item");
-        const imgSrc = item.find("img").attr("src");
-        const caption = item.find("p").text().trim() === "Click on edit to add a caption."
-            ? ""
-            : item.find("p").text();
-        const isFeature = item.data("feature");
-
-        currentEditingItem = item;
-
-        $("#popupImagePreview").attr("src", imgSrc);
-        $("#imageCaption").val(caption);
-        $("#featureImageCheck").prop("checked", isFeature);
-        $("#uploadImgPopup").modal("show");
-    });
-
-    const bindPhotoUploadEvents = () => {
-        $("#photoUploadView").on("click", () => {
-            if (isFileInputOpen) return;
-
-            isFileInputOpen = true;
-
-            const fileInput = $(`<input type="file" id="fileInput" accept="image/*" multiple hidden />`);
-            fileInput.on("change", (e) => handleFileUpload(e.target.files));
-            fileInput.trigger("click");
-        });
-    };
-
-    updatePhotoCount();
-    bindPhotoUploadEvents();
+// Drag & Drop Events
+$("#dropArea").on("click", function () {
+    if (images.length < MAX_IMAGES) {
+        $("#fileInput").trigger("click");
+    } else {
+        showError("Upload limit reached.");
+    }
 });
+
+$("#dropArea").on("dragover", function (e) {
+    e.preventDefault();
+    $(this).addClass("drag-over");
+});
+
+$("#dropArea").on("dragleave", function () {
+    $(this).removeClass("drag-over");
+});
+
+$("#dropArea").on("drop", function (e) {
+    e.preventDefault();
+    $(this).removeClass("drag-over");
+    handleFiles(e.originalEvent.dataTransfer.files);
+});
+
+$("#fileInput").on("change", function (e) {
+    handleFiles(e.target.files);
+});
+
+function handleFiles(files) {
+    if (images.length >= MAX_IMAGES) {
+        showError("Upload limit reached.");
+        return;
+    }
+
+    const file = files[0];
+    if (file) {
+        if (!file.type.startsWith("image/")) {
+            showError("Only images are allowed.");
+            return;
+        }
+
+        if (file.size > MAX_SIZE) {
+            showError("Image size must be less than 2MB.");
+            return;
+        }
+
+        const reader = new FileReader();
+        reader.onload = () => openPopup(reader.result);
+        reader.readAsDataURL(file);
+    }
+}
+
+function openPopup(imageSrc, index = null) {
+    $("#modalImage").attr("src", imageSrc);
+    editingIndex = index;
+
+    if (images.length === 0) {
+        $("#featuredBadge").parent().hide();
+    } else {
+        $("#featuredBadge").parent().show();
+    }
+
+    if (index !== null) {
+        $("#imageCaption").val(images[index].caption);
+        $("#featuredBadge").prop("checked", images[index].featured);
+    } else {
+        $("#imageCaption").val("");
+        $("#featuredBadge").prop("checked", images.length === 0);
+    }
+
+    $("#uploadImgPopup").modal("show");
+}
+
+
+$("#addImageButton").on("click", function () {
+    const newImage = {
+        src: $("#modalImage").attr("src"),
+        caption: $("#imageCaption").val(),
+        featured: $("#featuredBadge").is(":checked"),
+    };
+
+    if (newImage.featured) {
+        images.forEach((img) => (img.featured = false));
+    }
+
+    if (editingIndex !== null) {
+        images[editingIndex] = newImage;
+    } else {
+        if (images.length < MAX_IMAGES) {
+            newImage.featured = images.length === 0 ? true : newImage.featured;
+            images.push(newImage);
+        }
+    }
+
+    renderImages();
+    $("#uploadImgPopup").modal("hide");
+    resetPopupFields();
+    checkUploadLimit();
+});
+
+function resetPopupFields() {
+    $("#modalImage").attr("src", "");
+    $("#imageCaption").val("");
+    $("#featuredBadge").prop("checked", false);
+}
+
+function renderImages() {
+    const $uploadedImages = $("#uploadedImages");
+    $uploadedImages.empty();
+    images.forEach((img, index) => {
+        const listItem = $(`
+      <div class="item">
+        <img src="${img.src}" alt="Image ${index + 1}" class="img-fluid">
+        <div class="content">
+        ${img.featured
+                ? '<span class="badge">Featured</span>'
+                : ""
+            }
+        <p>${img.caption || "Click on edit to add a caption."}</p>
+        </div>
+        <div>
+          <button type="button" class="btn edit-btn" data-index="${index}"><i class="gol-edit"></i></button>
+          <button type="button" class="btn delete-btn" data-index="${index}"><i class="gol-trash"></i></button>
+        </div>
+      </div>
+    `);
+        $uploadedImages.append(listItem);
+    });
+    updateCounter();
+}
+
+$(document).on("click", ".edit-btn", function () {
+    const index = $(this).data("index");
+    openPopup(images[index].src, index);
+});
+
+$(document).on("click", ".delete-btn", function () {
+    const index = $(this).data("index");
+    const wasFeatured = images[index].featured; // Check if the deleted image was featured
+    images.splice(index, 1); // Remove the image from the array
+
+    if (wasFeatured && images.length > 0) {
+        // If the deleted image was featured, assign featured to the first image
+        images[0].featured = true;
+    }
+
+    renderImages();
+    checkUploadLimit();
+});
+
+function checkUploadLimit() {
+    if (images.length >= MAX_IMAGES) {
+        $("#dropArea").addClass("disabled");
+        showError("Upload limit reached. Delete an image to add more.");
+    } else {
+        $("#dropArea").removeClass("disabled");
+        $("#errorMessage").text("");
+    }
+    updateCounter();
+}
+
+function showError(message) {
+    $("#errorMessage").text(message);
+}

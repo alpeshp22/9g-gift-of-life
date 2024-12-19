@@ -12,10 +12,9 @@
     <!-- REQUIRED STYLES -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/owl.carousel.min.css">
-
     <!-- CUSTOM STYLES -->
     <link rel="stylesheet" href="css/gol-icon.css" />
-    <link href="css/style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/blocks.css" />
 </head>
 
@@ -96,16 +95,40 @@
                             </div>
                             <div class="row gx-lg-4 gx-sm-2">
                                 <div class="form-group col-sm-6">
-                                    <label for="dob">Date of Birth <span>(Required)</span></label>
+                                    <label for="dob" class="info-dropdown dropdown-center">
+                                        Date of Birth <span>(Required)</span>
+                                        <i class="gol-exclamation-circle" data-bs-toggle="dropdown"
+                                            aria-expanded="false"></i>
+                                        <div class="dropdown-menu">
+                                            <p>This field is confidential and will not be displayed publicly.</p>
+                                            <a class="btn" data-bs-toggle="dropdown" aria-expanded="false">Close</a>
+                                        </div>
+                                    </label>
                                     <input type="date" class="form-control" id="dob" value="1960-11-11">
                                 </div>
                                 <div class="form-group col-sm-6">
-                                    <label for="dod">Date of Donation <span>(Required)</span></label>
+                                    <label for="dod" class="info-dropdown dropdown-center">
+                                        Date of Donation <span>(Required)</span>
+                                        <i class="gol-exclamation-circle" data-bs-toggle="dropdown"
+                                            aria-expanded="false"></i>
+                                        <div class="dropdown-menu">
+                                            <p>This field is confidential and will not be displayed publicly.</p>
+                                            <a class="btn" data-bs-toggle="dropdown" aria-expanded="false">Close</a>
+                                        </div>
+                                    </label>
                                     <input type="date" class="form-control" id="dod" value="2022-01-17">
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label for="ctHospitalSearch">Hospital Where Loved One Died</label>
+                                <label for="ctHospitalSearch" class="info-dropdown dropdown-center">
+                                    Hospital Where Loved One Died <span>(Required)</span>
+                                    <i class="gol-exclamation-circle" data-bs-toggle="dropdown"
+                                        aria-expanded="false"></i>
+                                    <div class="dropdown-menu">
+                                        <p>This field is confidential and will not be displayed publicly.</p>
+                                        <a class="btn" data-bs-toggle="dropdown" aria-expanded="false">Close</a>
+                                    </div>
+                                </label>
                                 <select class="form-select" name="etHospitalSearch" id="etHospitalSearch">
                                     <option value="Temple Health - Chestnut Hill Hospital">Temple Health - Chestnut Hill
                                         Hospital</option>
@@ -115,7 +138,15 @@
                                 </select>
                             </div>
                             <div class="form-group">
-                                <label for="yourTribute">Your Tribute <span>(Required)</span></label>
+                                <label for="yourTribute" class="info-dropdown dropdown-center">
+                                    Your Tribute <span>(Required)</span>
+                                    <i class="gol-exclamation-circle" data-bs-toggle="dropdown"
+                                        aria-expanded="false"></i>
+                                    <div class="dropdown-menu">
+                                        <p>This field is confidential and will not be displayed publicly.</p>
+                                        <a class="btn" data-bs-toggle="dropdown" aria-expanded="false">Close</a>
+                                    </div>
+                                </label>
                                 <textarea class="form-control charCountArea" cols="30" rows="10" name="yourTribute"
                                     id="yourTribute" placeholder="Share tribute or story about your loved one"
                                     maxlength="3000">In a world that often feels chaotic and uncertain, the life of Mary Thompson stood as a
@@ -142,11 +173,14 @@
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label for="highlightPullout" class="d-lg-flex g-1 justify-content-between">
-                                    Highlight Text or Pullout
-                                    <i class="gol-exclamation-circle" data-bs-toggle="tooltip"
-                                        data-bs-title="Highlight Text or Pullout"
-                                        data-bs-custom-class="custom-tooltip"></i>
+                                <label for="highlightPullout" class="info-dropdown dropdown-center">
+                                    Highlight Text or Pullout <span>(Required)</span>
+                                    <i class="gol-exclamation-circle" data-bs-toggle="dropdown"
+                                        aria-expanded="false"></i>
+                                    <div class="dropdown-menu">
+                                        <p>This field is confidential and will not be displayed publicly.</p>
+                                        <a class="btn" data-bs-toggle="dropdown" aria-expanded="false">Close</a>
+                                    </div>
                                 </label>
                                 <textarea class="form-control charCountArea" rows="5" name="highlightPullout"
                                     id="highlightPullout"
@@ -162,10 +196,14 @@
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label for="yourSignature" class="d-lg-flex g-1 justify-content-between">
-                                    Your Signature <span class="ms-1 me-auto">(Required)</span>
-                                    <i class="gol-exclamation-circle" data-bs-toggle="tooltip"
-                                        data-bs-title="Your Signature" data-bs-custom-class="custom-tooltip"></i>
+                                <label for="yourSignature" class="info-dropdown dropdown-center">
+                                    Your Signature <span>(Required)</span>
+                                    <i class="gol-exclamation-circle" data-bs-toggle="dropdown"
+                                        aria-expanded="false"></i>
+                                    <div class="dropdown-menu">
+                                        <p>This field is confidential and will not be displayed publicly.</p>
+                                        <a class="btn" data-bs-toggle="dropdown" aria-expanded="false">Close</a>
+                                    </div>
                                 </label>
                                 <input type="text" class="form-control" id="yourSignature" name="yourSignature"
                                     placeholder="Enter Signature" value="From her loving family and friends">
@@ -183,28 +221,37 @@
                                     photo type and
                                     size.
                                 </p>
-                                <div class="photo-upload-view" id="photoUploadView">
+                                <div class="photo-upload-view" id="dropArea">
                                     <img src="images/click-to-upload.svg" class="img-fluid"
                                         alt="Click to Upload Image" />
                                 </div>
-                                <p class="sub-label text-end" id="uploadCount"></p>
+                                <input type="file" id="fileInput" accept="image/*" style="display: none;">
+                                <div class="d-md-flex align-items-center justify-content-between">
+                                    <p id="errorMessage" class="error-message"></p>
+                                    <p class="sub-label">Uploaded: <span id="uploadCounter">0/4</span></p>
+                                </div>
                             </div>
-                            <div class="form-group photo-list" id="photoList">
+                            <div class="form-group photo-list" id="uploadedImages">
                                 <!-- Dynamic Items will be added here -->
-                                <div class="item" data-feature="true">
+                            </div>
+                            <!-- This is Static Item to Show, Delete if not need -->
+                            <div class="photo-list">
+                                <div class="item">
                                     <img src="https://i.ibb.co/5402gbH/woman-istockphoto.jpg" class="img-fluid"
-                                        alt="Uploaded Photo">
+                                        alt="Image ${index + 1}">
                                     <div class="content">
+                                        <span class="badge">Featured</span>
                                         <p>Mary was a pillar of strength for her family. As a mother, she poured her
                                             heart into raising
                                             her three children.</p>
                                     </div>
                                     <div>
-                                        <button type="button" class="btn btn-edit"><i class="gol-edit"></i></button>
-                                        <button type="button" class="btn btn-delete"><i class="gol-trash"></i></button>
+                                        <button type="button" class="btn edit-btn"><i class="gol-edit"></i></button>
+                                        <button type="button" class="btn delete-btn"><i class="gol-trash"></i></button>
                                     </div>
                                 </div>
                             </div>
+                            <!-- /This is Static Item to Show, Delete if not need -->
                             <div class="form-group">
                                 <div class="form-check">
                                     <input class="form-check-input" type="checkbox" value="" id="creTriCheck1">
@@ -235,7 +282,7 @@
                                 </div>
                             </div>
                             <div class="form-group mb-0">
-                                <button class="btn btn-primary" type="submit">Save Yor Tribute</button>
+                                <button class="btn btn-primary" type="submit">Update Tribute</button>
                             </div>
                             <p class="sub-label d-lg-flex g-1 justify-content-between mt-2 mb-0">
                                 You can save and preview your tribute before submitting
@@ -255,42 +302,29 @@
     <!-- /FOOTER -->
 
     <!-- UPLOAD PHOTO POPUP -->
-    <div class="modal fade upld-img-popup" id="uploadImgPopup" tabindex="-1" aria-hidden="true"
-        data-bs-backdrop="static">
-        <div class="modal-dialog modal-dialog-centered">
+    <div class="modal fade upld-img-popup" id="uploadImgPopup" tabindex="-1" aria-labelledby="popupModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-body">
-                    <form action="#" class="uplod-img-frm" id="uploadImgForm">
-                        <div class="form-group">
-                            <div class="img-wrapper">
-                                <div class="img-box">
-                                    <img src="images/photo-placeholder-img.webp" id="popupImagePreview"
-                                        class="img-fluid" alt="upload image" />
-                                </div>
-                            </div>
+                    <div class="img-box">
+                        <img id="modalImage" src="" alt="Preview" class="img-fluid" />
+                    </div>
+                    <div class="form-check form-group">
+                        <div class="form-check mx-auto">
+                            <input class="form-check-input" type="checkbox" id="featuredBadge">
+                            <label class="form-check-label" for="featuredBadge">Use this image as feature image.</label>
                         </div>
-                        <div class="form-group">
-                            <div class="form-check mx-auto">
-                                <input class="form-check-input" type="checkbox" value="" id="featureImageCheck" />
-                                <label class="form-check-label" for="featureImageCheck">
-                                    Use this image as feature image.
-                                </label>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="imageCaption">
-                                Image Caption
-                                <span>(Limit to about 100 characters with spaces)</span>
-                            </label>
-                            <input type="text" class="form-control" id="imageCaption" name="imageCaption"
-                                placeholder="Write a caption for the image uploaded." maxlength="100">
-                        </div>
-                        <div class="text-center mt-40">
-                            <button type="button" id="save-caption" class="btn btn-primary">Save</button>
-                            <button type="button" class="btn blue-outline-btn ms-3"
-                                data-bs-dismiss="modal">Cancel</button>
-                        </div>
-                    </form>
+                    </div>
+                    <div class="form-group">
+                        <label for="imageCaption">Image Caption
+                            <span>(Limit to about 100 characters with spaces)</span></label>
+                        <input type="text" id="imageCaption" class="form-control" placeholder="Enter caption">
+                    </div>
+                    <div class="text-center mt-40">
+                        <button type="button" id="addImageButton" class="btn btn-primary">Save</button>
+                        <button type="button" class="btn blue-outline-btn ms-3" data-bs-dismiss="modal">Cancel</button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -303,7 +337,6 @@
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/main.js"></script>
-    <!-- CREATE TRIBUTE PAGE UPLOAD PHOTOS -->
     <script src="js/upload-photos.js"></script>
 </body>
 
